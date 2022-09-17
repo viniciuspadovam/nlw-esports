@@ -43,7 +43,7 @@ app.post("/games/:gameId/ads", async (req, res) => {
             name: body.name,           
             yearsPlaying: body.yearsPlaying,   
             discord: body.discord,        
-            weekDays: body.weekDays.join(','),       
+            weekDays: body.weekDays.join(","),       
             hourStart: convertHourToMinutes(body.hourStart),      
             hourEnd: convertHourToMinutes(body.hourEnd),        
             useVoiceChannel: body.useVoiceChannel,
@@ -108,5 +108,5 @@ app.get("/ads/:id/discord", async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}/ads`);
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
